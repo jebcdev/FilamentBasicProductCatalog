@@ -1,2 +1,4 @@
 /node_modules
+/storage/framework/cache
+/storage/framework/views
 /vendor
