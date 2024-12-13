@@ -18,6 +18,11 @@ class Product extends Model
         'unit_price',
     ];
 
+    protected $casts = [
+        'image' => 'array',
+
+    ];
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);

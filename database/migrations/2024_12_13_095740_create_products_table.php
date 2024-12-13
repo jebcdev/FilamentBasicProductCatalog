@@ -17,9 +17,12 @@ return new class extends Migration
             $table->foreignId('category_id')->references('id')->on('categories')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('name')->unique();
             $table->string('description');
-            $table->string('image')->nullable();
+
+            $table->json('image')->nullable();
+            
             $table->decimal('unit_price', 8, 0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

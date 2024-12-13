@@ -18,5 +18,13 @@ class CategorySeeder extends Seeder
             'description'=>'Productos electronicos',
             'image'=>null,
         ]);
+
+        for ($i=2; $i <=20 ; $i++) { 
+            Category::create([
+                'name'=>'Categoria '.$i,
+                'description'=>'Productos de la categoria '.$i,
+                'image'=>null,
+            ]);
+        }
     }
 }
